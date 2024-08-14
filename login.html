@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+    <h2>Login</h2>
+    <form autocomplete="off" onsubmit="signin(event)">
+        <label >Email:
+            <br>
+            <input type="text" placeholder="abc@gmail.com" id="loginemail">
+        </label>
+        <br>
+        <label >Password:
+            <br>
+            <input type="password" placeholder="123#$abc" id="loginpassword">
+        </label>
+        <br>
+        <div id="mess"></div>
+        
+        <button>Login</button>
+        </form>
+        <br>
+        
+        <p class="register">Don't have an account? <a href="register.html">Sign up</a></p>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+              apiKey: "AIzaSyBdEFYUsW_7u7475LcmhhVi0we1ygiadtU",
+              authDomain: "student-teacher-booking-eec6a.firebaseapp.com",
+              projectId: "student-teacher-booking-eec6a",
+              storageBucket: "student-teacher-booking-eec6a.appspot.com",
+              messagingSenderId: "184665502959",
+              appId: "1:184665502959:web:f5661fe1205f30bfb2171a",
+              measurementId: "G-ENYXQJV8FN"
+            };
+          
+            // Initialize Firebase
+            const firebaseApp =firebase.initializeApp(firebaseConfig);
+            const db = firebaseApp.firestore();
+   const auth = firebaseApp.auth();
+   
+</script>
+<script src="script.js"></script>
+    <style>
+        .login{
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 80vh;
+        flex-direction: column;
+        
+        font-size: 1.5rem;
+        }
+        body{
+            background-color: #c7edf8;
+        }
+    
+
+    </style>
+    
+    
+    
+</body>
+</html>

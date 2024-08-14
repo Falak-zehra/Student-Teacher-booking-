@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  id="appointments" class="appoint">
+    
+        <h2>Appointments</h2>
+        <br>
+        <div id="appointlist"></div>
+        <form id="appointForm" onsubmit="appointsubmit()">
+            <label for="studentName">Student Name:</label>
+            
+            <input type="text" id="studentName" required>
+            <br>
+            <label for="teacherName">Teacher Name:</label>
+            <input type="text" id="teacherName" required>
+            <br>
+
+            <label for="date">Select a Date:</label>
+            <input type="date" id="date" required>
+            <br>
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+            <br>
+            <button type="submit" class="btn">Book Appointment</button>
+        </form>
+
+        <script>
+            const firebaseConfig = {
+                      apiKey: "AIzaSyBdEFYUsW_7u7475LcmhhVi0we1ygiadtU",
+                      authDomain: "student-teacher-booking-eec6a.firebaseapp.com",
+                      projectId: "student-teacher-booking-eec6a",
+                      storageBucket: "student-teacher-booking-eec6a.appspot.com",
+                      messagingSenderId: "184665502959",
+                      appId: "1:184665502959:web:f5661fe1205f30bfb2171a",
+                      measurementId: "G-ENYXQJV8FN"
+                    };
+                  
+                    // Initialize Firebase
+                    const firebaseApp =firebase.initializeApp(firebaseConfig);
+                    const db = firebaseApp.firestore();
+           const auth = firebaseApp.auth();
+           
+        </script>
+        <script src="script.js"></script>
+
+  
+</body>
+</html>
